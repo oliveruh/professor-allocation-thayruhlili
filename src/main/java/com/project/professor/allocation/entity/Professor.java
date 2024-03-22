@@ -7,8 +7,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 public class Professor {
 	
 	@Id
@@ -23,24 +27,7 @@ public class Professor {
 	@JoinColumn(unique=false,nullable=false)
 	private Department dpt;
 	
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getCpf() {
-		return cpf;
-	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
+	
 	@Override
 	public String toString() {
 		return "Professor #" + id + ", Nome: " + name + ", CPF: " + cpf + "]";
