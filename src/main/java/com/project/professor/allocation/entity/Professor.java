@@ -34,7 +34,7 @@ public class Professor {
 	
 	@JsonProperty(access = JsonProperty.Access.READ_ONLY)
 	@ManyToOne(optional = false)
-	@JoinColumn(name = "department_id", unique=false, nullable=false)
+	@JoinColumn(name = "dpt_id", unique=false, nullable=false)
 	private Department dpt;
 	
 	@Schema(example = "22")
@@ -46,7 +46,7 @@ public class Professor {
 	
 	@Override
 	public String toString() {
-		return "Professor #" + id + ", Nome: " + name + ", CPF: " + cpf + "]";
+		return "Professor #" + id + ", Nome: " + name + ", CPF: " + cpf + ", dpt: " + dpt.toString() + "]";
 	}
 	
 	

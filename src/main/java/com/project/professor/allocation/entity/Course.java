@@ -17,11 +17,12 @@ import lombok.Setter;
 public class Course {
 	
 	@Id
+	@Schema(example = "52")
 	@JsonProperty(access = JsonProperty.Access.READ_ONLY)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Schema(name = "Curso de Inglês")
+	@Schema(example = "Curso de Inglês")
 	@Column(nullable=false, unique=true)
 	private String name;
 	
