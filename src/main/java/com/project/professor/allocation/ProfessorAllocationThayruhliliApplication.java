@@ -8,5 +8,6 @@ public class ProfessorAllocationThayruhliliApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProfessorAllocationThayruhliliApplication.class, args);
+		System.out.println("******* start *******");
 	}
 }
