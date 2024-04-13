@@ -46,7 +46,7 @@ public class ProfessorController {
         return new ResponseEntity<>(professors, HttpStatus.OK);
     }
 
-    @Operation(summary = "Procura um novo professor a partir do ID.")
+    @Operation(summary = "Procura um professor a partir do ID.")
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "Retorna um professor."),
             @ApiResponse(responseCode = "404", description = "Nenhum professor encontrado.")
@@ -59,6 +59,17 @@ public class ProfessorController {
         } else {
             return new ResponseEntity<>(professor, HttpStatus.OK);
         }
+    }
+
+    @Operation(summary = "Procura professores pelo ID do departamento.")
+    @ApiResponses({
+    	@ApiResponse(responseCode = "200", description = "Retorna uma lista de professores de um determinado departamento."),
+    	@ApiResponse(responseCode = "400", description = "Bad request.", content = @Content)
+    })
+    @GetMapping(path = "/department/{department_id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Professor>> findByDepartment(@PathVariable(name = "department_id") Long dptId) {
+        List<Professor> professors = professorService.findByDepartment(dptId);
+        return new ResponseEntity<>(professors, HttpStatus.OK);
     }
 
     @Operation(summary = "Adiciona um novo professor.")

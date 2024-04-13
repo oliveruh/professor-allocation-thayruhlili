@@ -22,6 +22,7 @@ import lombok.Setter;
 public class Allocation {
 	
 	@Id
+	@Schema(example = "62")
 	@JsonProperty(access = JsonProperty.Access.READ_ONLY)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -38,9 +39,11 @@ public class Allocation {
 	@Column(nullable=false)
 	private Time end;
 	
+	@JsonProperty(access = JsonProperty.Access.READ_ONLY)
 	@ManyToOne(optional=false)
 	private Professor professor;
 	
+	@JsonProperty(access = JsonProperty.Access.READ_ONLY)
 	@ManyToOne(optional=false)
 	private Course course;
 	

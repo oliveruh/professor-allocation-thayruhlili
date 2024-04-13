@@ -17,7 +17,7 @@ public class SwaggerConfig {
 	private Info getOpenApiInfo() {
 		return new Info()
 			.title("Professor Allocation")
-			.description("Professor Allocation ThayRuhLili")
+			.description("Projeto backend web do curso de Pós-Graduação em Engenharia de Software na disciplina do professor Tiago Santos.")
 			.version("0.0.1-SNAPSHOT");
 	}
 }

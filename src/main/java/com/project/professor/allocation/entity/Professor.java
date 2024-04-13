@@ -34,7 +34,7 @@ public class Professor {
 	
 	@JsonProperty(access = JsonProperty.Access.READ_ONLY)
 	@ManyToOne(optional = false)
-	@JoinColumn(name = "department_id", unique=false, nullable=false)
+	@JoinColumn(name = "dpt_id", unique=false, nullable=false)
 	private Department dpt;
 	
 	@Schema(example = "22")
