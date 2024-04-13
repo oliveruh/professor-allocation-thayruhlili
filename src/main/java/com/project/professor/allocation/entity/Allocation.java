@@ -64,7 +64,8 @@ public class Allocation {
 
 	@Override
 	public String toString() {
-		return "Allocation [id=" + id + ", day=" + day + ", start=" + start + ", end=" + end + "]";
+		return "Allocation [id=" + id + ", day=" + day + ", start=" + start + ", end=" + end + ", professor="
+				+ professor.toString() + ", course=" + course.toString() + "]";
 	}
 	
 	
