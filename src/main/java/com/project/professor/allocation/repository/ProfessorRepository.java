@@ -13,6 +13,6 @@ public interface ProfessorRepository extends JpaRepository<Professor, Long>{
 
     List<Professor> findByNameContainingIgnoreCase(String name);
 
-	List<Professor> findByDepartment(Department department);
+	List<Professor> findByDpt(Department department);
 
 }

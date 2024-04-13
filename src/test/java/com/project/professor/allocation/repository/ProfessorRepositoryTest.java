@@ -57,7 +57,7 @@ public class ProfessorRepositoryTest {
 		Department department = new Department();
 		department.setId(1L);
 
-		List<Professor> professors = professorRepository.findByDepartment(department);
+		List<Professor> professors = professorRepository.findByDpt(department);
 
         professors.forEach(System.out::println);
     }

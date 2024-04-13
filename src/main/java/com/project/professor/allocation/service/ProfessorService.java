@@ -34,7 +34,7 @@ public class ProfessorService {
 
 	public List<Professor> findByDepartment(Long departmentId) {
 		Department department = new Department();
-		return professorRepository.findByDepartment(department);
+		return professorRepository.findByDpt(department);
 	}
 
 	public Professor save(Professor professor) {
