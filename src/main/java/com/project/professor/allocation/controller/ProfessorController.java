@@ -80,7 +80,7 @@ public class ProfessorController {
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Professor> save(@RequestBody Professor professor) {
         try {
-            Professor prof = professorService.save(professor);
+            Professor prof = professorService.update(professor);
             return new ResponseEntity<>(prof, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
