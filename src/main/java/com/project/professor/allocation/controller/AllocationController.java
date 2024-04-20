@@ -110,7 +110,7 @@ public class AllocationController {
             @RequestBody Allocation allocation) {
         allocation.setId(id);
         try {
-            Allocation alloc = allocationService.save(allocation);
+            Allocation alloc = allocationService.update(allocation);
             if (alloc == null) {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
