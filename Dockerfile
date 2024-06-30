@@ -23,7 +23,7 @@ FROM openjdk:17-jdk-slim
 EXPOSE 8080
 
 # Copy the jar file from the build stage to the run stage
-COPY --from=build /app/target/demo-1.jar app.jar
+COPY --from=build /app/target/professor-allocation-thayruhlili-0.0.1-SNAPSHOT.jar app.jar
 
 # Define the entry point for the container
 ENTRYPOINT ["java", "-jar", "app.jar"]
