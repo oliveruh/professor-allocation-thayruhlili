@@ -19,7 +19,7 @@ O Professor Allocation é uma aplicação que facilita a alocação de professor
 - **Java**: Utilizado para desenvolver o backend da aplicação.
 - **Spring Boot**: Framework utilizado para criar a aplicação Java.
 - **Hibernate**: Utilizado para persistência de dados.
-- **PostgreSQL**: Banco de dados utilizado pela aplicação.
+- **MySQL**: Banco de dados utilizado pela aplicação.
 
 ## Instalação :wrench:
 
